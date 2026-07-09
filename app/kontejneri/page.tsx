@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Kontejneri() {
+const Kontejneri = () => {
   return <KontejneriPage />;
-}
+};
+
+export default Kontejneri;

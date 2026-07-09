@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
 };
 
-export const ONama = () => {
+const ONama = () => {
   return <AboutPage />;
 };
+
+export default ONama;

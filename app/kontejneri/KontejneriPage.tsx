@@ -1,3 +1,5 @@
+"use client";
+
 import CTA from "@/components/CTA";
 import KontejneriHero from "@/components/KontejneriHero";
 import ProcessSteps from "@/components/ProcessSteps";

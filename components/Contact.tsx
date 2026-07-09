@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import Icon from "./Icon";
 import CTA from "./CTA";
-
-const wasteContainersImg =
-  "/src/assets/images/waste_containers_1779895492948.png";
+import Link from "next/link";
 
 export default function KontaktPage() {
   const [formData, setFormData] = useState({
@@ -81,17 +79,18 @@ export default function KontaktPage() {
     >
       <div className="relative h-[25rem] sm:h-[28rem] flex items-center justify-center overflow-hidden bg-brand-green-dark">
         <div className="absolute inset-0 z-0">
-          <img
-            src={wasteContainersImg}
-            alt="Ferologistik containers"
-            className="w-full h-full object-cover object-center scale-105 filter brightness-90 animate-subtleZoom"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-green-dark/90 via-brand-green-dark/80 to-brand-orange-dark/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-green-dark/95 via-brand-green-dark/85 to-brand-orange-dark/35 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-black/45" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white flex flex-col items-center">
+          <nav className="flex items-center gap-2 mb-4 text-xs font-semibold tracking-wider uppercase text-brand-gold bg-white/5 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10">
+            <Link href="/" className="hover:text-white transition-colors">
+              Početna
+            </Link>
+            <span>/</span>
+            <span className="text-gray-300">Kontakt</span>
+          </nav>
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -100,12 +99,11 @@ export default function KontaktPage() {
           >
             Kontaktirajte Nas
           </motion.h1>
-
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="mt-4 max-w-xl text-sm sm:text-base text-gray-200 leading-relaxed font-medium"
+            className="mt-4 max-w-2xl text-sm sm:text-base text-gray-200 leading-relaxed font-medium"
           >
             Rezervišite građevinske kontejnere od 5m³, 9m³, 25m³ ili 30m³ za šut
             na lokacijama u Beogradu i okolini u roku od samo nekoliko minuta.

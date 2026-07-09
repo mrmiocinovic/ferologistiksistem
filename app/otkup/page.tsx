@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   },
 };
 
-export const Otkup = () => {
+const Otkup = () => {
   return <OtkupPage />;
 };
+
+export default Otkup;

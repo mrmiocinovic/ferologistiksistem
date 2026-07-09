@@ -3,7 +3,7 @@
 import CTA from "@/components/CTA";
 import Icon from "@/components/Icon";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type ProcessType = "najam" | "otkup";
