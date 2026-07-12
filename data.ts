@@ -282,7 +282,7 @@ export const faqsData: FAQItem[] = [
     id: "faq-1",
     question: "Kako se obračunava cena odvoženja šuta",
     answer:
-      "Cena zavisi od tri faktora: da li je šut već u džakovima ili u rinfuzu, da li je potreban naš utovar (naši radnici) ili vaš utovar, i od same lokacije u gradu. Kod džakova cena zavisi od količine, dok se kod rinfuza naplaćuje po kontejneru ili zapremini kamiona. Pozovite nas ili pošaljite sliku šuta na Viber/WhatsApp i odmah dobijate fiksnu cenu!",
+      "Cena odvoženja šuta zavisi od ukupne količine građevinskog otpada i broja kontejnera koji su potrebni za njegovo odvoženje. Na konačnu cenu može uticati i lokacija, odnosno pristup mestu na kojem se šut nalazi. Kako bismo vam dali tačnu i fiksnu ponudu, dovoljno je da nas pozovete ili nam pošaljete fotografiju šuta putem Vibera ili WhatsApp-a. Na osnovu procene količine odmah ćemo vam preporučiti odgovarajući broj kontejnera i dostaviti konačnu cenu, bez skrivenih troškova.",
   },
   {
     id: "faq-2",

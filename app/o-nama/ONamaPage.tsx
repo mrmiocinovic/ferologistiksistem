@@ -163,8 +163,8 @@ export default function AboutPage() {
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   Za gradilišta, kućna renoviranja, čišćenje hala ili
                   raščišćavanje terena obezbeđujemo robusne čelične kontejnere
-                  zapremine **5m³, 9m³, 25m³ i 30m³**. Svesni smo da zakašnjenje
-                  u isporuci kontejnera obustavlja rad čitavog tima radnika i
+                  zapremine 5m³, 9m³, 25m³ i 30m³. Svesni smo da zakašnjenje u
+                  isporuci kontejnera obustavlja rad čitavog tima radnika i
                   stvara finansijske gubitke.
                 </p>
 
@@ -244,17 +244,16 @@ export default function AboutPage() {
                 <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                   Naš namenski reciklažni plac vrši otkup i ekološko
                   zbrinjavanje svih vrsta obojenih i crnih metala. Otkupljujemo
-                  **bakar (I, II, III klasa), aluminijum, mesing, olovo,
-                  prohrom, cink, stare auto akumulatore i kablove sa
-                  izolacijom**.
+                  bakar (I, II, III klasa), aluminijum, mesing, olovo, prohrom,
+                  cink, stare auto akumulatore i kablove sa izolacijom.
                 </p>
 
                 <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
                   Posedujemo isključivo digitalne baždarene vage koje garantuju
                   apsolutnu tačnost merenja do poslednjeg grama, pred vašim
-                  očima. Za veće količine (preko 300kg) na vašu adresu šaljemo
+                  očima. Za veće količine (preko 1000kg) na vašu adresu šaljemo
                   kamion sa hidrauličnom dizalicom (grajferom) i radnicima za
-                  brz i čist utovar. Isplata se vrši **odmah na licu mesta**.
+                  brz i čist utovar. Isplata se vrši odmah na licu mesta.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-gray-100">
@@ -331,7 +330,7 @@ export default function AboutPage() {
                     : "text-gray-500 hover:text-gray-800"
                 }`}
               >
-                Najam kontejnera
+                Iznajmljivanje kontejnera
               </button>
               <button
                 onClick={() => setActiveProcess("otkup")}

@@ -60,6 +60,14 @@ export const metadata: Metadata = {
     siteName: "Ferologistik Sistem DOO",
     locale: "sr_RS",
     type: "website",
+    images: [
+      {
+        url: "https://ferologistiksistem.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ferologistik Sistem DOO",
+      },
+    ],
   },
   icons: {
     icon: "/icon.png",

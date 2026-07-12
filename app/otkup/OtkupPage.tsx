@@ -99,7 +99,7 @@ const OtkupPage = () => {
     },
     {
       title: "Sopstveni utovar i odvoz",
-      desc: "Za veće količine (preko 300kg) obezbeđujemo besplatan kamionski prevoz sa dizalicom (grajferom) i radnicima za brz utovar na Vašoj adresi.",
+      desc: "Za veće količine (preko 1000kg) obezbeđujemo besplatan kamionski prevoz sa dizalicom (grajferom) i radnicima za brz utovar na Vašoj adresi.",
       icon: "Truck",
     },
     {

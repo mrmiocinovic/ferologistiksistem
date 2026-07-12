@@ -67,7 +67,7 @@ export default function ProcessSteps() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl sm:text-4xl font-heading font-extrabold text-brand-green-dark tracking-tight leading-tight"
           >
-            Jednostavan Proces Najma Kontejnera
+            Jednostavan Proces Iznajmljivanja Kontejnera
           </motion.h2>
 
           <motion.p

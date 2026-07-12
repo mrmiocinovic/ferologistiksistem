@@ -165,9 +165,7 @@ export default function DualServicesPillars() {
                       className="w-3.5 h-3.5 text-brand-gold shrink-0"
                     />
                   </div>
-                  <span>
-                    Ekološki ispravan tretman u partnerstvu sa livnicama
-                  </span>
+                  <span>Ekološki ispravan tretman</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="mt-0.5 rounded-full bg-brand-gold/10 p-1">

@@ -40,7 +40,7 @@ export default function Services() {
         >
           <div className="inline-flex items-center gap-1 bg-brand-green/10 text-brand-green-light px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
             <Icon name="Wrench" className="w-3.5 h-3.5 text-brand-orange" />
-            <span>Profesionalne usluge najma kontejnera</span>
+            <span>Profesionalne usluge iznajmljivanja kontejnera</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-brand-green-dark tracking-tight leading-tight">

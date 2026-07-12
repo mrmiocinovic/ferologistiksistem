@@ -10,7 +10,7 @@ export default function KontaktPage() {
     fullName: "",
     email: "",
     phone: "",
-    serviceType: "Najam Kontejnera 5m³",
+    serviceType: "Iznajmljivanje Kontejnera 5m³",
     location: "Beograd (Zemun Batajnica)",
     message: "",
   });
@@ -59,7 +59,7 @@ export default function KontaktPage() {
         fullName: "",
         email: "",
         phone: "",
-        serviceType: "Najam Kontejnera 5m³",
+        serviceType: "Iznajmljivanje Kontejnera 5m³",
         location: "",
         message: "",
       });
@@ -177,7 +177,7 @@ export default function KontaktPage() {
               </span>
 
               <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-brand-green-dark tracking-tight">
-                Pošaljite Zahtev za Rezervaciju
+                Pošaljite Nam Email
               </h2>
 
               <p className="text-gray-500 text-sm leading-relaxed -mt-2">
@@ -240,17 +240,17 @@ export default function KontaktPage() {
                     onChange={handleChange}
                     className="w-full text-sm p-4 border border-gray-200 rounded-xl focus:border-brand-orange focus:outline-none bg-white font-medium"
                   >
-                    <option value="Najam Kontejnera 5m³">
-                      Najam Kontejnera 5m³
+                    <option value="Iznajmljivanje Kontejnera 5m³">
+                      Iznajmljivanje Kontejnera 5m³
                     </option>
-                    <option value="Najam Kontejnera 9m³">
-                      Najam Kontejnera 9m³
+                    <option value="Iznajmljivanje Kontejnera 9m³">
+                      Iznajmljivanje Kontejnera 9m³
                     </option>
-                    <option value="Najam Kontejnera 25m³">
-                      Najam Kontejnera 25m³
+                    <option value="Iznajmljivanje Kontejnera 25m³">
+                      Iznajmljivanje Kontejnera 25m³
                     </option>
-                    <option value="Najam Kontejnera 30m³">
-                      Najam Kontejnera 30m³
+                    <option value="Iznajmljivanje Kontejnera 30m³">
+                      Iznajmljivanje Kontejnera 30m³
                     </option>
                     <option value="Dugoročni Zakup za Firme">
                       Dugoročni Zakup za Firme
@@ -279,7 +279,8 @@ export default function KontaktPage() {
               </div>
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                  Poruka (Namena kontejnera, trajanje najma, prilaz lokaciju...)
+                  Poruka (Namena kontejnera, trajanje iznajmljivanja, prilaz
+                  lokaciju...)
                 </label>
                 <textarea
                   name="message"
@@ -295,10 +296,10 @@ export default function KontaktPage() {
                 className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-black text-base py-4.5 rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wide"
               >
                 <Icon
-                  name="Calendar"
+                  name="Mail"
                   className="w-5 h-5 text-white animate-pulse"
                 />
-                <span>Rezerviši Građevinski Kontejner</span>
+                <span>Pošalji Poruku</span>
               </button>
             </form>
             {isSubmitted && (
