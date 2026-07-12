@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Icon from "./Icon";
 import CTA from "./CTA";
 import Link from "next/link";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,9 +14,10 @@ const Contact = () => {
     serviceType: "Iznajmljivanje Kontejnera 5m³",
     location: "Beograd (Zemun Batajnica)",
     message: "",
+    website: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const [token, setToken] = useState("");
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -40,13 +42,21 @@ const Contact = () => {
       return;
     }
 
+    if (!token) {
+      alert("Molimo potvrdite da niste robot.");
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken: token,
+        }),
       });
 
       if (!response.ok) {
@@ -62,6 +72,7 @@ const Contact = () => {
         serviceType: "Iznajmljivanje Kontejnera 5m³",
         location: "",
         message: "",
+        website: "",
       });
     } catch (error) {
       console.error(error);
@@ -212,6 +223,15 @@ const Contact = () => {
                     className="w-full text-sm p-4 border border-gray-200 rounded-xl focus:border-brand-orange focus:outline-none bg-gray-50/50 hover:bg-white font-medium focus:bg-white transition-all"
                     placeholder={"npr. 0641234567"}
                   />
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    autoComplete="off"
+                    tabIndex={-1}
+                    className="hidden"
+                  />
                 </div>
               </div>
               <div>
@@ -291,6 +311,10 @@ const Contact = () => {
                   placeholder="Opišite nam namenu kontejnera, željeni datum dostave, očekivani broj dana držanja ili specifičnosti okoline..."
                 />
               </div>
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={(token) => setToken(token)}
+              />
               <button
                 type="submit"
                 className="w-full bg-brand-orange hover:bg-brand-orange-dark text-white font-black text-base py-4.5 rounded-xl shadow-lg transition-transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wide"

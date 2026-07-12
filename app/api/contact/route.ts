@@ -4,16 +4,48 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const { fullName, email, phone, serviceType, location, message } =
-      await req.json();
+    const {
+      fullName,
+      email,
+      phone,
+      serviceType,
+      location,
+      message,
+      turnstileToken,
+      website,
+    } = await req.json();
+
+    if (website) {
+      return Response.json({ error: "Forbidden" }, { status: 403 });
+    }
+
+    const verify = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          secret: process.env.TURNSTILE_SECRET_KEY!,
+          response: turnstileToken,
+        }),
+      },
+    );
+
+    const result = await verify.json();
+
+    if (!result.success) {
+      return Response.json({ error: "Bot detected." }, { status: 400 });
+    }
+    if (!fullName || !email || !phone || !location) {
+      return Response.json({ error: "Neispravni podaci." }, { status: 400 });
+    }
 
     await resend.emails.send({
-      from: "Ferologistik Sistem <onboarding@resend.dev>",
-
+      from: "Ferologistik Sistem <kontakt@ferologistiksistem.com>",
       to: "dekimioc@gmail.com",
-
       replyTo: email,
-
       subject: `Novi zahtev od ${fullName}`,
 
       html: `
