@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Ferologistik Sistem <kontakt@ferologistiksistem.com>",
-      to: "dekimioc@gmail.com",
+      to: "office.ferologistik@gmail.com",
       replyTo: email,
       subject: `Novi zahtev od ${fullName}`,
 
