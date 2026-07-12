@@ -1,31 +1,6 @@
 import KontaktPage from "@/components/Contact";
 import { Metadata } from "next";
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "Ferologistik Sistem DOO",
-      description:
-        "Otkup sekundarnih sirovina, upravljanje otpadom i iznajmljivanje građevinskih kontejnera.",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Batajnica",
-        addressRegion: "Beograd",
-        addressCountry: "RS",
-      },
-      areaServed: ["Beograd", "Batajnica", "Zemun", "Surčin", "Novi Beograd"],
-      serviceType: [
-        "Otkup sekundarnih sirovina",
-        "Reciklaža",
-        "Iznajmljivanje građevinskih kontejnera",
-      ],
-    }),
-  }}
-/>;
-
 export const metadata: Metadata = {
   title: "Kontakt | Ferologistik Sistem DOO",
   description:
@@ -51,5 +26,34 @@ export const metadata: Metadata = {
 };
 
 export default function Kontakt() {
-  return <KontaktPage />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Ferologistik Sistem DOO",
+    description:
+      "Otkup sekundarnih sirovina, upravljanje otpadom i iznajmljivanje građevinskih kontejnera.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Batajnica",
+      addressRegion: "Beograd",
+      addressCountry: "RS",
+    },
+    areaServed: ["Beograd", "Batajnica", "Zemun", "Surčin", "Novi Beograd"],
+    serviceType: [
+      "Otkup sekundarnih sirovina",
+      "Reciklaža",
+      "Iznajmljivanje građevinskih kontejnera",
+    ],
+  };
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />{" "}
+      <KontaktPage />
+    </>
+  );
 }
