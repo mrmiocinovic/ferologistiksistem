@@ -5,7 +5,7 @@ import Icon from "./Icon";
 import CTA from "./CTA";
 import Link from "next/link";
 
-export default function KontaktPage() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -362,4 +362,6 @@ export default function KontaktPage() {
       <CTA />
     </motion.div>
   );
-}
+};
+
+export default Contact;

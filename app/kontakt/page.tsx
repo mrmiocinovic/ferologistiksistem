@@ -1,4 +1,4 @@
-import Contact from "@/components/Contact";
+import KontaktPage from "@/components/Contact";
 import { Metadata } from "next";
 
 <script
@@ -51,5 +51,5 @@ export const metadata: Metadata = {
 };
 
 export default function Kontakt() {
-  return <Contact />;
+  return <KontaktPage />;
 }
